@@ -92,10 +92,9 @@ The executable supports the following options:
 
 Run a simulation and save outputs to `Outputs/`:
 
-```bash
-./HCC_s_sim -t 280 -p ../resource/param_all_test.xml -o Outputs -B -S -G 1
+`$ ./HCC_s_sim -t 280 -p ../resource/param_all_test.xml -o Outputs -B -S -G 1`
 It is recommended to run `$ clean` <br /> before running `$ make HCC_s_sim` <br /> if the code has been modified in between simulations.
-=======
+
 # Model Calibration Framework
 
 This repository implements a model calibration workflow using Approximate Bayesian Computation Sequential Monte Carlo (ABC-SMC) with **pyABC**.

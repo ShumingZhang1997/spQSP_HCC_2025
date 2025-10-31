@@ -65,30 +65,35 @@ To prepare spQSP for a simulation, write:
 Then, to show all options to configure the simulation:
 `$ ./HCC_s_sim -h` <br />
 
-It will show the following options:
+### Command-line options
 
-`  -h [ --help ]                        || produce help message` <br />
-`  -s [ --seed ] arg (=0)               || seed value` <br />
-`  -t [ --time ] arg (=0)               || total number of steps` <br />
-`  -p [ --param-file ] arg               || parameter file name` <br />
-`  -o [ --output-path ] arg (=defaultOut)` <br />
-`                                        || output file base path` <br />
-`  --outParam arg (=outParam.xml)        || save a copy of parameter file` <br />
-`  -B [ --brief ]                        || print brief tracking info to stdout` <br />
-`  -S [ --stats ]                        || whether to print stats` <br />
-`  --stats-interval arg (=1)             || interval to save stats` <br />
-`  -G [ --grid ] arg (=0)                || whether to print grid info. 0: nothing;` <br />
-`                                        || 1: cell only; 2: grid only; 3: both.` <br />
-`  --grid-interval arg (=1)              || interval to print grid information` <br />
-`  --save-state-start arg                || save state starting slice` <br />
-`  --save-state-interval arg             || save state interval` <br />
-`  --load-state arg                      || load save state file` <br />
+The executable supports the following options:
 
-Example of a line that runs a simulation and creates a set of output files in a folder called Outputs:
+| Option | Default | Description |
+|--------|---------|-------------|
+| `-h, --help` | — | Produce help message |
+| `-s, --seed` | `0` | Seed value |
+| `-t, --time` | `0` | Total number of simulation steps |
+| `-p, --param-file` | — | Parameter file name |
+| `-o, --output-path` | `defaultOut` | Output file base path |
+| `--outParam` | `outParam.xml` | Save a copy of parameter file |
+| `-B, --brief` | — | Print brief tracking info to stdout |
+| `-S, --stats` | — | Print simulation statistics |
+| `--stats-interval` | `1` | Interval to save stats |
+| `-G, --grid` | `0` | Grid print mode (0: none, 1: cell, 2: grid, 3: both) |
+| `--grid-interval` | `1` | Interval to print grid information |
+| `--save-state-start` | — | Time step to start saving state |
+| `--save-state-interval` | — | Interval for saving state |
+| `--load-state` | — | Load saved state file |
 
-`$ ./HCC_s_sim -t 280 -p ../resource/param_all_test.xml -o Outputs -B -S -G 1` <br />
-or just use the command: <br />
-`$ ./single_simulation` <br />
+---
+
+### Example command
+
+Run a simulation and save outputs to `Outputs/`:
+
+```bash
+./HCC_s_sim -t 280 -p ../resource/param_all_test.xml -o Outputs -B -S -G 1
 It is recommended to run `$ clean` <br /> before running `$ make HCC_s_sim` <br /> if the code has been modified in between simulations.
 =======
 # Model Calibration Framework
@@ -115,9 +120,9 @@ This pipeline enables:
 - Parallelized model evaluations using Dask  
 - Scalable HPC execution with `dask-jobqueue`
 
-##Run Calibration
+## Run Calibration
 To run the calibration framework in the paper:
 `$ python model_calibration_spqsp.py` <br />
 
-##Citation
+## Citation
 > Schälte, Y., Klinger, E., Alamoudi, E., & Hasenauer, J. (2022). *pyABC: Efficient and robust easy-to-use approximate Bayesian computation*. **Journal of Open Source Software, 7**(74), 4304. https://doi.org/10.21105/joss.04304

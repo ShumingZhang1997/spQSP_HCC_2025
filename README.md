@@ -4,7 +4,7 @@
 
 This step helps to setup the Ubuntu operating system in for Windows user via virtual machine.
 1. The virtual machine host: VirtualBox is available at https://www.virtualbox.org/
-2 . The Ubuntu Desktop image (Latest version 18.04) is available at   [http://www.releases.ubuntu.com/20.04/](https://releases.ubuntu.com/18.04/)
+2 . The Ubuntu Desktop image (Latest version 18.04) is available at   [https://releases.ubuntu.com/18.04/]
 3. Enter the “Oracle VM VirtualBox Manager”, press “New” to create the virtual machine with all default settings. (Recommend allocate 20 GB for storage and 2 GB of RAM)
 
 **Notice**: All following operations should be done in the Linux operating systems (the virtual machine), NOT Windows.

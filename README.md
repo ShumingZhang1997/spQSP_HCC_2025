@@ -115,9 +115,9 @@ This pipeline enables:
 - Parallelized model evaluations using Dask  
 - Scalable HPC execution with `dask-jobqueue`
 
-##Run Calibration
+## Run Calibration
 To run the calibration framework in the paper:
 `$ python model_calibration_spqsp.py` <br />
 
-##Citation
+## Citation
 > Schälte, Y., Klinger, E., Alamoudi, E., & Hasenauer, J. (2022). *pyABC: Efficient and robust easy-to-use approximate Bayesian computation*. **Journal of Open Source Software, 7**(74), 4304. https://doi.org/10.21105/joss.04304
